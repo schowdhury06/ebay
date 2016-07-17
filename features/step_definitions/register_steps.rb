@@ -9,33 +9,35 @@ When(/^I  click on the "([^"]*)" button$/) do |arg1|
 end
 
 Then(/^It directs me to the register page$/) do
+  visit("https://reg.ebay.com/reg/PartialReg")
   @register_page = RegisterPage.new
-  expect(page.current_url).to start_with("https://reg.ebay.com/reg/PartialReg")
+  @register_page.load
 end
 
 Then(/^I enter my email "([^"]*)" on email field$/) do |email|
-  pending # Write code here that turns the phrase above into concrete actions
+  @register_page.email.send_keys email
 end
 
-Then(/^I reenter my email "([^"]*)" on email field$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+Then(/^I reenter my email "([^"]*)" on email field$/) do |reemail|
+  @register_page.reemail.send_keys reemail
 end
 
-Then(/^I enter my passwork "([^"]*)"$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+Then(/^I enter my passwork "([^"]*)"$/) do |password|
+  @register_page.password.send_keys password
 end
 
-Then(/^I put my first name "([^"]*)"  on name field$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+Then(/^I put my first name "([^"]*)"  on name field$/) do |firstname|
+  @register_page.first_name.send_keys firstname
 end
 
-Then(/^I put my last name "([^"]*)" on name field$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+Then(/^I put my last name "([^"]*)" on name field$/) do |lastname|
+  @register_page.last_name.send_keys lastname
 end
 
-Then(/^I enter my phone number (\d+)$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+Then(/^I enter my phone number "([^"]*)" on phone number field$/) do |phonenumber|
+  @register_page.phone_number.send_keys phonenumber.to_i
 end
+
 Then(/^I click on register button$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  @register_page.register.click
 end

@@ -9,8 +9,8 @@ Feature: ebay register
     	Then I reenter my email "shyd_chow" on email field
     	Then I enter my passwork "abcd"
     	Then I put my first name "shyd"  on name field
-    	Then I put my last name "ch0w" on name field
-    	Then I enter my phone number 71845222
+    	Then I put my last name "chow" on name field
+    	Then I enter my phone number "71845222" on phone number field
     	Then I click on register button
  
     
