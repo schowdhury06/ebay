@@ -5,14 +5,15 @@ Given(/^I am on homepage$/) do
 end
 
 When(/^I  click on the "([^"]*)" button$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+  @home_page.register_button.click
 end
 
 Then(/^It directs me to the register page$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  @register_page = RegisterPage.new
+  expect(page.current_url).to start_with("https://reg.ebay.com/reg/PartialReg")
 end
 
-Then(/^I enter my email "([^"]*)" on email field$/) do |arg1|
+Then(/^I enter my email "([^"]*)" on email field$/) do |email|
   pending # Write code here that turns the phrase above into concrete actions
 end
 
