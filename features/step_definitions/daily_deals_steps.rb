@@ -50,3 +50,49 @@ Then(/^I click on proceed to checkout$/) do
 Then(/^I click on continue as a guest$/) do
   @register_page.continue_as_guest.click
 end
+
+When(/^I click on the search button$/) do
+ @register_page.search_button.click
+end
+
+Then(/^I enter iphone (\d+)s (\d+)gb$/) do 
+  @register_page.iphone6s_64gb.send_keys iphone6s_64gb
+end
+
+Then(/^It directs me to new  page$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I click on "([^"]*)" from Categories$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+Then(/^I click on "([^"]*)" button from Features$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I click on "([^"]*)" button from condition$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I click on "([^"]*)" from carrie$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I click on "([^"]*)" from Storage Capacity$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+Then(/^I click on "([^"]*)" from color$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I click on updated results$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I click on New Seal Apple iPhone (\d+)s (\d+)GB GSM$/) do |arg1, arg2|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^It directs me to a new page$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end

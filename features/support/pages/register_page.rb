@@ -32,4 +32,5 @@ class ShoppingCartPage < SitePrism::Page
     element :shopping_cart_contain, :id, "gh-cart-1"
     element :proceed_to_checkout, :id, "ptcBtnRight"
     element :continue_as_guest, :id, "gtChk"
+    element :search_button, :id, "gh-ac"
 end
