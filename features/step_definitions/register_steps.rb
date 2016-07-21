@@ -9,7 +9,7 @@ When(/^I  click on the "([^"]*)" button$/) do |arg1|
 end
 
 Then(/^It directs me to the register page$/) do
-  visit("https://reg.ebay.com/reg/PartialReg")
+  visit('https://reg.ebay.com/reg/PartialReg')
   @register_page = RegisterPage.new
   @register_page.load
 end

@@ -1,7 +1,7 @@
 @ebay_register
 Feature: ebay register
 
-    Scenario:Create account with email 
+    Scenario: Create account with email 
     	Given I am on homepage
     	When I  click on the "register" button
     	Then It directs me to the register page
@@ -13,6 +13,5 @@ Feature: ebay register
     	Then I enter my phone number "71845222" on phone number field
     	Then I click on register button
  
-    
-		
-    
+ 
+ 
