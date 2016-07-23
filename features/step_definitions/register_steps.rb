@@ -41,3 +41,17 @@ end
 Then(/^I click on register button$/) do
   @register_page.register.click
 end
+
+Then(/^I click on clickable links under the menu option$/) do 
+  @home_page.click_links.each do |click_link|
+    link = click_link.click
+  end
+  
+end
+
+Then(/^I come back on homepage$/) do
+  visit('http://www.ebay.com/')
+  @home_page = HomePage.new
+  @home_page.load
+end
+

@@ -42,3 +42,9 @@
        Then I click on proceed to checkout
        Then I click on continue as a guest
        
+    @checking link
+    Scenario: checking all link under Help & Contact
+    	Given I am on homepage
+    	Then I click on clickable links under the menu option
+    	Then I come back on homepage
+       
