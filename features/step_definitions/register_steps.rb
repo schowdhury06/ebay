@@ -73,9 +73,7 @@ Then(/^I hover on "([^"]*)" button under fashion And click "([^"]*)"$/) do |arg1
 end
 
 Then(/^it directs me to the earrings page$/) do
-  visit "http://www.ebay.com/sch/Fashion-Earrings/50647/bn_2408508/i.html"
-  @register_page = FashionEarRingsPage.new
-  @register_page.load
+  html/body/div[4]/div/div/div[1]/div[1]/div/table/tbody/tr/td[13]/a
 end
 
 Then(/^all the earrings should be displayed$/) do
@@ -83,18 +81,22 @@ Then(/^all the earrings should be displayed$/) do
 end
 
 Then(/^I hover on "([^"]*)" menu And click on "([^"]*)"$/) do |arg1, arg2|
-  pending # Write code here that turns the phrase above into concrete actions
+  @home_page.deals.hover
+  Capybara.default_max_wait_time = 5
+  @home_page.gift_card_deals.click
 end
 
 Then(/^I get directed to gift card deals page$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  visit "http://deals.ebay.com/other-deals/gift-cards"
+  @register_page = GiftCardPage.new
+  @register_page.load
 end
 
-Then(/^I click on "([^"]*)" option$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+Then(/^I click on "([^"]*)" option$/) do 
+  @register_page.jcpenney_card.click
 end
 
-Then(/^I get directed to JCP card page$/) do
+Then(/^I get directed to JCP card page$/) do |arg1|
   pending # Write code here that turns the phrase above into concrete actions
 end
 

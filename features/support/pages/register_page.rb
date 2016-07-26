@@ -47,3 +47,13 @@ class FashionEarRingsPage < SitePrism::Page
   
   elements :brand, "#w2 > div.b-module-carousel__list > ul > li:nth-child(1)" 
 end
+class Deals < SitePrism::Page 
+  
+   
+ end
+ 
+ class GiftCardPage < SitePrism::Page
+   set_url "http://deals.ebay.com/other-deals/gift-cards"
+   element :jcpenney_card, :xpath, "html/body/div[3]/div/div[3]/div[3]/div[1]/div[1]/div/div[2]/h3/a/span"
+ end
+
