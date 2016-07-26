@@ -34,3 +34,16 @@ class ShoppingCartPage < SitePrism::Page
     element :continue_as_guest, :id, "gtChk"
     element :search_button, :id, "gh-ac"
 end
+
+class FashionPage < SitePrism::Page
+    set_url "http://www.ebay.com/rpp/fashion-main"
+    
+    element :jewelry, :xpath, "html/body/div[3]/div[3]/ul/li[1]/ul/li[4]/a"
+    element :fashion_ear_rings, :xpath, "html/body/div[3]/div[3]/ul/li[1]/ul/li[4]/ul/li[3]/a"
+end
+
+class FashionEarRingsPage < SitePrism::Page
+  set_url "http://www.ebay.com/sch/Fashion-Earrings/50647/bn_2408508/i.html"
+  
+  element :list_brand, :xpath, "//div[@class='guidance-module__list-item__img-div']" 
+end

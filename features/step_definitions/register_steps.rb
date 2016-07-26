@@ -55,3 +55,76 @@ Then(/^I come back on homepage$/) do
   @home_page.load
 end
 
+Then(/^I click on "([^"]*)" button$/) do |arg1|
+  @home_page.shop_by_category.click
+end
+
+
+Then(/^It direct me to a new page$/) do
+  visit "http://www.ebay.com/rpp/fashion-main"
+  @register_page = FashionPage.new
+  @register_page.load
+end
+
+Then(/^I hover on "([^"]*)" button under fashion And click "([^"]*)"$/) do |arg1, arg2|
+  @register_page.jewelry.hover
+  @register_page.fashion_ear_rings.click
+end
+
+Then(/^it directs me to the earrings page$/) do
+  visit "http://www.ebay.com/sch/Fashion-Earrings/50647/bn_2408508/i.html"
+  @register_page = FashionEarRingsPage.new
+  @register_page.load
+end
+
+Then(/^all the earrings should be displayed$/) do
+  expect(@register_page).to have_list_brand
+end
+
+Then(/^I hover on "([^"]*)" menu And click on "([^"]*)"$/) do |arg1, arg2|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I get directed to gift card deals page$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I click on "([^"]*)" option$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I get directed to JCP card page$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I click on "([^"]*)" buttong$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I click on "([^"]*)" logo$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I put "([^"]*)" in the recipient's email address field$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I put "([^"]*)" in your name field$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I write "([^"]*)" in message field$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I click on Continue button$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I get directed to Shopping Cart page$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^all the items in the cart menu should be displayed$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end

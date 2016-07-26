@@ -10,5 +10,10 @@ class HomePage < SitePrism::Page
   def click_links
     check_link
   end
-  
+
 end
+
+class HomePage < SitePrism::Page
+element :shop_by_category, :id, "gh-shop-a"
+end
+

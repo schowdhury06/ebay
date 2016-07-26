@@ -28,7 +28,6 @@ when 'safari'
   Capybara.register_driver :selenium do |app|
     $browser = Capybara::Selenium::Driver.new(app, :browser => :safari)
   end
-
 else
 Capybara.register_driver :selenium do |app|
 $browser = Capybara::Selenium::Driver.new(app, :browser => :firefox)

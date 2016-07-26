@@ -42,9 +42,50 @@
        Then I click on proceed to checkout
        Then I click on continue as a guest
        
-    @checking link
+    @checking_link
     Scenario: checking all link under Help & Contact
     	Given I am on homepage
     	Then I click on clickable links under the menu option
     	Then I come back on homepage
        
+    @shop_by_category
+    Scenario: shop by caegory
+    	Given I am on homepage
+    	Then I click on "shop by category" button
+    	Then I click on "fasion" button
+    	Then It direct me to a new page
+    	Then I hover on "jewelry" button under fashion And click "Fine Earrings"
+    	Then it directs me to the earrings page
+    	Then all the earrings should be displayed
+    	
+    @shop_by_hovering
+    Scenario: hovering and buying products
+    	Given I am on homepage
+    	 Then I hover on "Deals" menu And click on "Gift Card Deals"
+    	 Then I get directed to gift card deals page    	
+         Then I click on "JCPenney $50 card" option 
+         Then I get directed to JCP card page
+         Then I click on "Add to Cart" buttong
+         Then I click on "this is a gift" logo
+         Then I put "minhaj272c@gmail.com" in the recipient's email address field
+         Then I put "Shamrat" in your name field
+         Then I write "This is a gift for you" in message field
+         Then I click on Continue button
+         Then I get directed to Shopping Cart page
+         Then all the items in the cart menu should be displayed
+     
+     @help_and_contact
+     Scenario: Finding help and contact options
+     	Given I am on homepage
+     	 Then I click on "Help & Contact" option
+     	 Then it directs me to the Help and Contact page
+     	 Then I click on "buying" under browse by topic
+     	 Then I click on Paying for items
+     
+     @help_and_contact_real
+     Scenario: Contact with them
+     	Given I am on homepage
+     	 Then I click on "Help & Contact" option
+     	 Then it directs me to the Help and Contact page
+     	 Then I click on "Contact us" bar
+     	 Then it directs me to the sign in page

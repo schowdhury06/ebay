@@ -13,5 +13,5 @@ Feature: ebay register
     	Then I enter my phone number "71845222" on phone number field
     	Then I click on register button
  
- 
+
  
