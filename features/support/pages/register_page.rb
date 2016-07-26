@@ -45,5 +45,5 @@ end
 class FashionEarRingsPage < SitePrism::Page
   set_url "http://www.ebay.com/sch/Fashion-Earrings/50647/bn_2408508/i.html"
   
-  element :list_brand, :xpath, "//div[@class='guidance-module__list-item__img-div']" 
+  elements :brand, "#w2 > div.b-module-carousel__list > ul > li:nth-child(1)" 
 end

@@ -68,6 +68,7 @@ end
 
 Then(/^I hover on "([^"]*)" button under fashion And click "([^"]*)"$/) do |arg1, arg2|
   @register_page.jewelry.hover
+  Capybara.default_max_wait_time = 5
   @register_page.fashion_ear_rings.click
 end
 
@@ -78,7 +79,7 @@ Then(/^it directs me to the earrings page$/) do
 end
 
 Then(/^all the earrings should be displayed$/) do
-  expect(@register_page).to have_list_brand
+  expect(@register_page).to have_brand
 end
 
 Then(/^I hover on "([^"]*)" menu And click on "([^"]*)"$/) do |arg1, arg2|
