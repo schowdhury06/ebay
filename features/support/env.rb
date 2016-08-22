@@ -19,7 +19,7 @@ browser_name = ENV['BROWSER'] || 'chrome'
 case browser_name
 when 'chrome'
   Capybara.register_driver :selenium do |app|
-    chromedriver_path = "/Users/Shyd/Desktop/chromedriver.exe"
+    chromedriver_path = "/Users/Shamrat Chowdhury/Desktop/chromedriver.exe"
     Selenium::WebDriver::Chrome.driver_path = chromedriver_path
     $browser = Capybara::Selenium::Driver.new(app, :browser => :chrome)
   end
