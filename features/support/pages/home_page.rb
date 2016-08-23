@@ -4,6 +4,7 @@ class HomePage < SitePrism::Page
   element :register_button, :id, "gh-ug-flex"
   element :shop_by_category, :id, "gh-shop-a"
   element :fashion, :xpath, "//*[@id='gh-sbc']/tbody/tr/td[2]/h3[1]/a"
+  element :daily_deals, :xpath, "//a[text()='Daily Deals']"
 end
 
 
