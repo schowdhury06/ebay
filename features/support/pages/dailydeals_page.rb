@@ -1,13 +1,15 @@
 class DailyDealsPage < SitePrism::Page 
    set_url "http://deals.ebay.com/"
    
-   element :apple_iphone, :xpath, "//*[@id='w3']/div[3]/div[7]/div/div[2]/h3/a/span"
+   element :first_product_box, :xpath, "//*[@id='w12']/div/div[1]/div[1]"
    
 end
-class AppleIphonePage < SitePrism::Page 
-    set_url "http://www.ebay.com/itm/New-Apple-iPhone-6-Plus-AT-T-GSM-16GB-Silver-Space-Gray-or-Gold-LTE/361677237880?hash=item5435a4ae78&_trkparms=5373%3A0%7C5374%3AFeatured"
+
+class FirstProductBox < SitePrism::Page 
+    set_url "http://www.ebay.com/itm/New-Apple-iPhone-6-Plus-AT-T-GSM-16GB-Silver-Space-Gray-or-Gold-LTE/361677237880?hash=item5435a4ae78&_trkparms=5373%3A0%7C5374%3AFeatured%7C5079%3A5000027329"
 end 
-class AppleIphonePage < SitePrism::Page
+
+class FirstProductBox < SitePrism::Page
    
   element :color, :id, "msku-sel-1"
   element :black, :id, "msku-opt-0"

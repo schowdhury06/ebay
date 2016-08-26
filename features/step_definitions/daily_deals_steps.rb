@@ -7,14 +7,14 @@ Then(/^It directs me to new ebay new deals page$/) do
   expect(page.current_url).to start_with("http://deals.ebay.com/")
 end
 
-Then(/^I click on Apple iphone$/) do
+Then(/^I click on first product box at "Hottest Tech Deals"$/) do
    Capybara.default_max_wait_time = 10
-   @dailydeals_page.apple_iphone.click
+   @dailydeals_page.first_product_box.click
 end
 
-Then(/^It directs me to Apple iphone page$/) do
-  @dailydeals_page = AppleIphonePage.new
-  expect(page.current_url).to start_with("http://www.ebay.com/itm/New-Apple-iPhone-6-Plus-AT-T-GSM-16GB-Silver-Space-Gray-or-Gold-LTE/361677237880?hash=item5435a4ae78&_trkparms=5373%3A0%7C5374%3AFeatured")
+Then(/^It directs me to first product box detail page$/) do
+  @dailydeals_page = FirstProductBox.new
+  expect(page.current_url).to start_with("http://www.ebay.com/itm/New-Apple-iPhone-6-Plus-AT-T-GSM-16GB-Silver-Space-Gray-or-Gold-LTE/361677237880?hash=item5435a4ae78&_trkparms=5373%3A0%7C5374%3AFeatured%7C5079%3A5000027329")
 end
 
 Then(/^I click on color$/) do
@@ -25,8 +25,9 @@ Then(/^I click on black$/) do
   @dailydeals_page.black.click
 end
 
-Then(/^I enter on quantiy box two$/) do
- @dailydeals_page.quantity.send_keys 2.to_i
+Then(/^I enter on quantiy box (\d+)$/) do |quantity|
+  @dailydeals_page.quantity.clear
+  @dailydeals_page.quantity.send_keys quantity
 end
 
 Then(/^I click on add to cart$/) do

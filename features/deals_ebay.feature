@@ -5,8 +5,8 @@
         Given I am on homepage
         When I click on the "daily deals" button
         Then It directs me to new ebay new deals page
-        Then I click on Apple iphone 
-        Then It directs me to Apple iphone page
+        Then I click on first product box at "Hottest Tech Deals"
+        Then It directs me to first product box detail page
         Then I click on color
         Then I click on black
         Then I enter on quantiy box two
