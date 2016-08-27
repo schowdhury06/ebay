@@ -5,5 +5,8 @@ Then(/^I hover on United States and click on Canada$/) do
 end
 
 Then(/^it directs me to the ebay Canada sites$/) do
+  visit('http://www.ebay.ca/')
+  @home_page = HomePage.new
+  @home_page.load
   
 end
