@@ -1,6 +1,7 @@
 @change_country
 Feature: Change the country section of ebay
 
+
 	@change_it_to_Canada
 	Scenario: Changing the country to Canada
 	Given I am on homepage

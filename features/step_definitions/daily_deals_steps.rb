@@ -14,20 +14,12 @@ end
 
 Then(/^It directs me to first product box detail page$/) do
   @dailydeals_page = FirstProductBox.new
-  expect(page.current_url).to start_with("http://www.ebay.com/itm/New-Apple-iPhone-6-Plus-AT-T-GSM-16GB-Silver-Space-Gray-or-Gold-LTE/361677237880?hash=item5435a4ae78&_trkparms=5373%3A0%7C5374%3AFeatured%7C5079%3A5000027329")
+  expect(page.current_url).to start_with("http://www.ebay.com/itm/Sony-XBR-43X830C-43-Inch-4K-Ultra-HD-Smart-Android-LED-HDTV/331713216241?hash=item4d3ba5fef1&_trkparms=5373%3A0%7C5374%3AFeatured%7C5079%3A5000027329")
 end
 
-Then(/^I click on color$/) do
-@dailydeals_page.color.click
-end
-
-Then(/^I click on black$/) do
-  @dailydeals_page.black.click
-end
-
-Then(/^I enter on quantiy box (\d+)$/) do |quantity|
-  @dailydeals_page.quantity.clear
-  @dailydeals_page.quantity.send_keys quantity
+Then(/^I enter  "([^"]*)" on quantiy box$/) do  |quantity_box|
+  #@dailydeals_page.quantity_box.clear
+  @dailydeals_page.quantity_box.send_keys quantity_box.to_i
 end
 
 Then(/^I click on add to cart$/) do

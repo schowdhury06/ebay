@@ -6,14 +6,13 @@ class DailyDealsPage < SitePrism::Page
 end
 
 class FirstProductBox < SitePrism::Page 
-    set_url "http://www.ebay.com/itm/New-Apple-iPhone-6-Plus-AT-T-GSM-16GB-Silver-Space-Gray-or-Gold-LTE/361677237880?hash=item5435a4ae78&_trkparms=5373%3A0%7C5374%3AFeatured%7C5079%3A5000027329"
+    set_url "http://www.ebay.com/itm/Sony-XBR-43X830C-43-Inch-4K-Ultra-HD-Smart-Android-LED-HDTV/331713216241?hash=item4d3ba5fef1&_trkparms=5373%3A0%7C5374%3AFeatured%7C5079%3A5000027329"
 end 
 
 class FirstProductBox < SitePrism::Page
    
-  element :color, :id, "msku-sel-1"
-  element :black, :id, "msku-opt-0"
-  element :quantity, :id, "qtyTextBox"
+ 
+  element :quantity_box, :id, "qtyTextBox"
   element :addtocart, :id, "isCartBtn_btn"
 
 end
