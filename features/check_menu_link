@@ -1,0 +1,43 @@
+@check_link
+Feature: Check each link under different department
+
+
+	@check_different_link_buy
+	Scenario: Checking buy link
+		Given I am on homepage
+		Then I click on each link under "buy" option from homepage
+		
+	@check_different_link_sell
+	Scenario: Checking sell link
+		Given I am on homepage
+		Then I click on each link under "sell" option from homepage
+	
+	@check_different_link_tools_apps
+	Scenario: Checking tools link
+		Given I am on homepage
+		Then I click on each link under "Tools & apps" option from homepage
+		
+	@check_different_link_companies
+	Scenario: Checking companies link
+		Given I am on homepage
+		Then I click on each link under "ebay companies" option from homepage
+		
+	@check_different_link_connected
+	Scenario: Checking stay connected link
+		Given I am on homepage
+		Then I click on each link under "connected" option from homepage
+		
+	@check_different_link_about
+	Scenario: Checking about ebay link
+		Given I am on homepage
+		Then I click on each link under "About ebay" option from homepage
+		
+	@check_different_link_help
+	Scenario: Checking help link
+		Given I am on homepage
+		Then I click on each link under "help & contact" option from homepage
+		
+	@check_different_link_community
+	Scenario: Checking community link
+		Given I am on homepage
+		Then I click on each link under "community" option from homepage

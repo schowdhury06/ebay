@@ -1,17 +1,16 @@
 @search_product
  Feature: search cricket product
-    
+    @search_cricket_bat 
     Scenario: searching for cricket bat
         Given I am on homepage
-        Then I type ss cricket bat on search box
-        Then I click on search button
+        Then I search ss cricket bat on search feild
         Then It should direct me to the search result page
         Then I click on auction button
         Then It direct me to ss cricket bat auction page
-        Then I hover on best match 
-        Then I choose "time newly listed"
-        Then It should displayed all the ss cricket bat newly listed in auction
-
+        Then I hover on best match and click all option from best match list
+        
+      
+		@cricket_pad
          Scenario: searching for cricket pads
         Given I am on homepage
         Then I type ss cricket pat on search box

@@ -10,6 +10,12 @@ class HomePage < SitePrism::Page
  
   element :united_states, :id, "gf-fbtn"
   element :canada, :xpath, "//*[@id='gf-f']/ul/li[4]/a"
+  element :india, :xpath, "//*[@id='gf-f']/ul/li[9]/a"
+  
+  element :search_field, :id, "gh-ac"
+  element :search_box, :id, "gh-btn"
+  
+  elements :down_menu_links, :class, "thrd"
 end
 
 
