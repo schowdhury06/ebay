@@ -1,4 +1,4 @@
-@check_link
+@check_link @done
 Feature: Check each link under different department
 
 

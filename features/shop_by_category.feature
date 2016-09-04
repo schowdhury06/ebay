@@ -1,4 +1,4 @@
- @shop_by_category
+ @shop_by_category @done
  Feature: shopping by category
  
  @fine_earrings

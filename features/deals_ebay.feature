@@ -1,4 +1,4 @@
- @from_daily_deals
+ @from_daily_deals @done
  Feature: add item from daily deals
     
     Scenario: Add item from daily deals

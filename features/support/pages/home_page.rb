@@ -16,7 +16,11 @@ class HomePage < SitePrism::Page
   element :search_box, :id, "gh-btn"
   
   elements :down_menu_links, :class, "thrd"
+  
+  element :better_ebay, :xpath, "//*[@id='user-feedback']/a"
 end
+
+
 
 
 
