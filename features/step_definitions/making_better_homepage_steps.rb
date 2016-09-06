@@ -19,23 +19,4 @@ end
 Then(/^I click on submit button$/) do
   pending # Write code here that turns the phrase above into concrete actions
 end
-  
-Then(/^I click on "([^"]*)" from How can we make this page better for you option$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Then(/^it directs me to the users feedback page$/) do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Then(/^I click on Somewhat Effective button$/) do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Then(/^I write "([^"]*)" under the feedback writing option$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Then(/^I click on submit button$/) do
-  pending # Write code here that turns the phrase above into concrete actions
-end
+ 

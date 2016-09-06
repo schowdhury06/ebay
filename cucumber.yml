@@ -1,0 +1,2 @@
+default: features/ --format html --out reports/report.html --format pretty
+chrome: BROWSER='chrome' features/ --format html --out reports/report.html --format pretty
