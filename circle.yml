@@ -1,15 +1,23 @@
-# Customize the test machine
+#Customize the test machine
 machine:
 
   timezone:
-    America/New_York # Set the timezone
+    America/New_York # GMT -5.00
 
-  # Version of ruby to use
+#Version of ruby to use
   ruby:
     version:
-    2.3.1
+      2.2.4
     
- ## Customize dependencies
+#Customize dependencies
 dependencies:
-   
-    - gem install bundler
+  pre:
+    
+    - gem install bundler 
+    - bundle install
+    
+ #Customize test commands
+test:
+  
+  post:
+    - cucumber features
